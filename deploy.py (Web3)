@@ -1,0 +1,4 @@
+from web3 import Web3
+
+def deploy():
+    print("Deploy placeholder - conectar con Infura o Alchemy")
