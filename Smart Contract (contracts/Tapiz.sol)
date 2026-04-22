@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Tapiz {
+    uint[] public primes;
+
+    constructor(uint[] memory _primes) {
+        primes = _primes;
+    }
+
+    function getPrime(uint i) public view returns (uint) {
+        return primes[i];
+    }
+}
