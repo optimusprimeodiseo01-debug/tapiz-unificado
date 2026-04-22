@@ -1,0 +1,26 @@
+from geometry import triangle_distances
+from tapiz import build_T, compute_H, compute_K, compute_L
+from spectral import eigen_analysis
+
+def run():
+    # --- Geometría ---
+    tri = triangle_distances(2, 4, 3)
+    print("Triángulo:", tri)
+
+    # --- Tapiz ---
+    T = build_T(3)
+    H = compute_H(T)
+    K = compute_K(H)
+    L = compute_L(H)
+
+    print("\nT:\n", T)
+    print("\nH:\n", H)
+    print("\nK:\n", K)
+    print("\nL:\n", L)
+
+    # --- Espectro ---
+    vals, _ = eigen_analysis(L)
+    print("\nAutovalores:", vals)
+
+if __name__ == "__main__":
+    run()
