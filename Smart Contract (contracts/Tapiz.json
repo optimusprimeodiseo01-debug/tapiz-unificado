@@ -1,0 +1,2 @@
+npm install -g solc
+solc --combined-json abi,bin contracts/Tapiz.sol > contracts/Tapiz.json
