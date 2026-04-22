@@ -1,1 +1,0 @@
-w3 = Web3(Web3.HTTPProvider("https://sepolia.infura.io/v3/API_KEY"))
