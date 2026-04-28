@@ -1,37 +1,15 @@
-# Tapiz Unificado
+# tapiz-runner
 
-Sistema basado en:
-
-T(i,i) = prime(i)
-H = log(T)
-K = H - H^T
-L = i*(H - H^T)
-
-Incluye:
-- Geometría discreta (triángulos)
-- Construcción de tapiz
-- Análisis espectral
-- Deploy contrato (testnet-ready)
-- Runner local
+Nodo de procesamiento del sistema Tapiz.
 
 ## Flujo
 
-1. Generar T
-2. Aplicar log → H
-3. Obtener K y L
-4. Calcular autovalores
-5. Integrar geometría como input
+tapiz-core → tapiz-runner → tapiz-executor → contrato
 
-## Ejecutar
+## Entrada
 
-```bash
-pip install -r requirements.txt
-python src/main.py
----
+signals/latest.json
 
-# 2) requirements.txt
+## Salida
 
-```txt
-numpy
-sympy
-web3
+signals/processed.json
